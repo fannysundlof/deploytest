@@ -41,8 +41,7 @@ class UserLogin extends Component {
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      //firebase.auth.TwitterAuthProvider.PROVIDER_ID, 
-      //firebase.auth.PhoneAuthProvider.PROVIDER_ID
+      
     ]
   };
 
@@ -59,7 +58,7 @@ class UserLogin extends Component {
         this.props.userCredential(res.user.email);
         this.props.showDisplayName(displayName);
         res.user.sendEmailVerification();
-        console.log("Regi Välkommen" + displayName);
+        console.log("Välkommen" + displayName);
       });
   }
 
@@ -73,7 +72,7 @@ class UserLogin extends Component {
 
     auth.sendPasswordResetEmail(emailAddress).then(function () {
       // Email sent.
-      console.log("email sent");
+      console.log("Email sent");
     });
     e.preventDefault();
   }
@@ -83,7 +82,8 @@ class UserLogin extends Component {
       <div className="margin">
         {this.state.loginRegi && (
           <div>
-            <h3>Logga in user</h3>
+          <h1 className={"margin-bottom"}>Välkommen till Fanny's App</h1>
+            <h3 >Logga in</h3>
             <form onSubmit={this.onSubmitLogin.bind(this)} className={"form"}>
               <input
                 type="text"
@@ -97,15 +97,15 @@ class UserLogin extends Component {
                 placeholder="Password"
                 className={"input"}
               />
-              <button>Login</button>
+              <button >Logga in</button>
             </form>
-            <div>
+            <div className={"margin-bottom"}>
         </div>
             <button
               onClick={this.onClickRegister.bind(this)}
               className={"contact_btn"}
-            >
-              Register
+              >
+              Registrera
             </button>
             {this.state.forgotP && (
               <button
@@ -158,7 +158,7 @@ class UserLogin extends Component {
                 className={"input"}
               />
 
-              <button>Register</button>
+              <button>Registrera</button>
             </form>
             <h3>Har du redan ett konto?</h3>
             <button

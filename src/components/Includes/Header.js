@@ -1,6 +1,6 @@
 import React from "react"; 
 import {Link} from "react-router-dom";
-import Logout from "../AuthAdmin/Logout";
+import Logout from "../AuthUser/Logout";
 
 const Header = () => {
     return(
@@ -19,9 +19,6 @@ const Header = () => {
             </li>
             <li>
               <Link to={"/booking"} className={"navmenu__a"}>Boka</Link>
-            </li>
-            <li>
-            <Link to={"/admin"} className={"navmenu__a"}>Admin</Link>
             </li>
             <Logout />
           </ul>

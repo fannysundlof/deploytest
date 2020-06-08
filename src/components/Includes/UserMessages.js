@@ -5,8 +5,6 @@ import firebase from "../Firebase/FirebaseConfig";
 class UserMessages extends Component {
   state = {
     displaybtn: true,
-    products: [],
-    status: null,
     
   };
 
@@ -19,21 +17,24 @@ class UserMessages extends Component {
     docRef.get().then((message) => {
       if (message.exists) {
         var messageCard = document.getElementById("message_card");
-        
+        var btn = document.getElementById("btn");
 
-        messageCard.querySelector(".username").innerHTML = message.data().username;
-        messageCard.querySelector(".message").innerHTML = message.data().message;
+        messageCard.querySelector(
+          ".username"
+        ).innerHTML = message.data().username;
+        messageCard.querySelector(
+          ".message"
+        ).innerHTML = message.data().message;
         messageCard.querySelector(".time").innerHTML = message.data().time;
 
         console.log("Det finns:", message.data());
-       
+        this.setState({ displaybtn: false });
+        btn.remove();
       } else {
         console.log("error");
       }
     });
   }
-
- 
 
   render() {
     return (
@@ -52,12 +53,11 @@ class UserMessages extends Component {
             <h3 className={"username"}> </h3>
             <p className={"message"}> </p>
             <p className={"time"}></p>
-           
           </div>
         </div>
-        </div>
-        );
-      }
-    }
-    
-    export default UserMessages ;
+      </div>
+    );
+  }
+}
+
+export default UserMessages;

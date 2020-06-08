@@ -36,7 +36,7 @@ class Logout extends Component{
     
         login() {
 
-            window.document.location = "http://localhost:3000/";
+            window.document.location = "https://fannysapp.netlify.app";
         }
 
 

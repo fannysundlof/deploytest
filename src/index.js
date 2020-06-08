@@ -3,9 +3,5 @@ import ReactDOM from 'react-dom';
 import Navigation from './components/Navigation';
 
 
-
-
-
-
 ReactDOM.render(<Navigation /> , document.querySelector("#root"));
 

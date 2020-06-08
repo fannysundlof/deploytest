@@ -68,16 +68,16 @@ render(){
             </div>
             <ul className="aboutus__icons-container">
               <li className="aboutus__icon">
-                <a href=""><i className="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.instagram.com/"><i className="fab fa-instagram fa-2x"></i></a>
               </li>
               <li className="aboutus__icon">
-                <a href=""><i className="fab fa-facebook fa-2x"></i></a>
+                <a href="https://www.facebook.com/"><i className="fab fa-facebook fa-2x"></i></a>
               </li>
               <li className="aboutus__icon">
-                <a href=""><i className="fab fa-twitter fa-2x"></i></a>
+                <a href="https://twitter.com/"><i className="fab fa-twitter fa-2x"></i></a>
               </li>
               <li className="aboutus__icon">
-                <a href=""><i className="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://www.linkedin.com/"><i className="fab fa-linkedin fa-2x"></i></a>
               </li>
             </ul>
           </div>
