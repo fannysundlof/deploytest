@@ -34,6 +34,7 @@ class UserBooking extends Component {
     });
   }
 
+
   render() {
     return (
       <div>
@@ -47,13 +48,15 @@ class UserBooking extends Component {
               Visa bokingar
             </button>
           )}
-          <div id={"booking_card"}>
-            <h3 className={"title"}> </h3>
+          <div id={"booking_card"} >
+          
+            <h3 className={"title"} > </h3>
             <p className={"id"} hidden></p>
             <p className={"price"}> </p>
           </div>
+          </div>
         </div>
-      </div>
+     
     );
   }
 }

@@ -13,12 +13,13 @@ class Card extends Component {
     db.collection("booking")
       .doc(firebase.auth().currentUser.uid.toString())
       .set({
+            
         title: document.getElementById("title").innerHTML,
         price: document.getElementById("price").innerHTML,
         id: document.getElementById("id").innerHTML,
       });
 
-    alert("Tillagd i bokingar");
+    alert("Tillagd i bokningar");
   }
 
   componentDidMount() {
@@ -47,7 +48,7 @@ class Card extends Component {
             src={require("../../img/interior-1.jpeg")}
             alt={"bild"}
           />
-          <h2 className={"product__card-name"} id="title">
+          <h2 className={"product__card-name"} id="title" name={"title"}>
             Interior 1
           </h2>
           <div className={"product__card-desc"}>

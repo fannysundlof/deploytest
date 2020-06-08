@@ -100,7 +100,7 @@ class UserLogin extends Component {
               <button >Logga in</button>
             </form>
             <div className={"margin-bottom"}>
-        </div>
+            </div>
             <button
               onClick={this.onClickRegister.bind(this)}
               className={"contact_btn"}

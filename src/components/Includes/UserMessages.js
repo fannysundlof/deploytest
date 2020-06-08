@@ -46,10 +46,12 @@ class UserMessages extends Component {
               id={"btn"}
               className={"contact_btn"}
             >
-              Visa skickade meddelanden
+              Visa meddelanden
             </button>
           )}
-          <div id={"message_card"}>
+          
+          <div id={"message_card"} className={"margin-bottom"}>
+          
             <h3 className={"username"}> </h3>
             <p className={"message"}> </p>
             <p className={"time"}></p>

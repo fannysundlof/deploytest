@@ -33,6 +33,10 @@
   box-shadow: 5px 5px 20px rgba(253, 251, 251, 0.966);
   border: 2px solid $border;
   opacity: .8;
+
+  p, h3 {
+    background-color: $card-col;
+  }
 }
 .edit_product__card {
   display: flex;
@@ -67,8 +71,9 @@
 }
 .product__card-name,
 .product__card-price {
-  margin: 0.5rem;
+  margin: 1rem;
   background-color: $card-col;
+  padding-bottom: 0.5rem;
 }
 .edit_product__card-name,
 .edit_product__card-price {
