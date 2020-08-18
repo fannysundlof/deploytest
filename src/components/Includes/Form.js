@@ -1,7 +1,22 @@
 import React, { Component } from "react";
 import firebase from "../Firebase/FirebaseConfig";
+import Modal from 'react-modal';
+ 
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
+
 
 class Form extends Component {
+
+
   onSubmitForm(e) {
     e.preventDefault();
 
@@ -23,9 +38,14 @@ class Form extends Component {
     }
   }
 
-  render() {
+  render(props) {
     return (
       <div>
+
+      
+     <Modal isOpen={props.openModal} style={customStyles} contentLabel="BookingForm">
+
+
         <form onSubmit={this.onSubmitForm} className={"form"}>
           <input
             type={"text"}
@@ -54,6 +74,8 @@ class Form extends Component {
 
           <button>Boka</button>
         </form>
+
+        </Modal>
       </div>
     );
   }

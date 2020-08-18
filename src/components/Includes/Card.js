@@ -45,7 +45,7 @@ class Card extends Component {
         <div className={"product__card"}>
           <img
             className={"product__card-img"}
-            src={require("../../img/interior-1.jpeg")}
+            src={"/img/interior-1.jpeg"}
             alt={"bild"}
           />
           <h2 className={"product__card-name"} id="title" name={"title"}>
@@ -78,7 +78,7 @@ class Card extends Component {
         <div className={"product__card"}>
           <img
             className={"product__card-img"}
-            src={require("../../img/interior-2.jpeg")}
+            src={"/img/interior-2.jpeg"}
             alt={"bild"}
           />
           <h2 className={"product__card-name"} id="title">
@@ -111,7 +111,7 @@ class Card extends Component {
         <div className={"product__card"}>
           <img
             className={"product__card-img"}
-            src={require("../../img/interior-4.jpeg")}
+            src={"/img/interior-4.jpeg"}
             alt={"bild"}
           />
           <h2 className={"product__card-name"} id="title">
