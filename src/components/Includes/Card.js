@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
 import firebase from "../Firebase/FirebaseConfig";
+import Bookbtn from "../Includes/Bookbtn";
 
 class Card extends Component {
   state = {
@@ -8,20 +8,7 @@ class Card extends Component {
     displayName: "",
   };
 
-  onClickSave() {
-    const db = firebase.firestore();
-    db.collection("booking")
-      .doc(firebase.auth().currentUser.uid.toString())
-      .set({
-            
-        title: document.getElementById("title").innerHTML,
-        price: document.getElementById("price").innerHTML,
-        id: document.getElementById("id").innerHTML,
-      });
-
-    alert("Tillagd i bokningar");
-  }
-
+  
   componentDidMount() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -66,12 +53,12 @@ class Card extends Component {
           {!loggedIn ? (
             <p>Logga in för att boka</p>
           ) : (
-            <button
+            <Bookbtn
               className={"product__card-btn"}
-              onClick={this.onClickSave.bind(this)}
+              
             >
               Boka
-            </button>
+            </Bookbtn>
           )}
         </div>
 
@@ -99,12 +86,12 @@ class Card extends Component {
           {!loggedIn ? (
             <p>Logga in för att boka</p>
           ) : (
-            <button
-              className={"product__card-btn"}
-              onClick={this.onClickSave.bind(this)}
-            >
-              Boka
-            </button>
+            <Bookbtn
+            className={"product__card-btn"}
+            
+          >
+            Boka
+          </Bookbtn>
           )}
         </div>
 
@@ -132,12 +119,11 @@ class Card extends Component {
           {!loggedIn ? (
             <p>Logga in för att boka</p>
           ) : (
-            <button
+            <Bookbtn
               className={"product__card-btn"}
-              onClick={this.onClickSave.bind(this)}
             >
               Boka
-            </button>
+            </Bookbtn>
           )}
         </div>
       </div>

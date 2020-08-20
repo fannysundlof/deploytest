@@ -2,10 +2,11 @@ import React from "react";
 import "../../style/_main.scss";
 import UserPage from "../AuthUser/UserPage";
 
-const App = (props) => {
+const App = () => {
   return (
     <div>
       <UserPage />
+      
     </div>
   );
 };

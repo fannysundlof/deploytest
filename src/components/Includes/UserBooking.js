@@ -10,7 +10,7 @@ class UserBooking extends Component {
   onClickGetBookings() {
     const db = firebase.firestore();
     const docRef = db
-      .collection("booking")
+      .collection("Booking")
       .doc(firebase.auth().currentUser.uid.toString());
 
     docRef.get().then((booking) => {

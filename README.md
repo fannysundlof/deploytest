@@ -32,7 +32,9 @@ Vi har skapat ett CMS i Strapi där vi ska lagra våra produkter som hämtas gen
   
     I footer kan du:
     -Skicka meddelande (Spara data i firebase)
-
+  
+  Se V1-V4 här https://github.com/fannysundlof/react_inl
+__________________________________________________
   # V5
 
   App deployment med Netlify
@@ -40,3 +42,9 @@ Vi har skapat ett CMS i Strapi där vi ska lagra våra produkter som hämtas gen
   Firebase är deployat tillsammans med Fannys react app. Strapi är inte deployat och all funktion som Admin och produktdatabasen är borttagen. Se Version 3 för Strapi använding. 
 
   Länk till appen: https://fannysapp.netlify.app/
+
+  # V6
+
+  Modal inlagd 
+  Controlled elements på Form
+

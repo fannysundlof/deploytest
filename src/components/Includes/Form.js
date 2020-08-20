@@ -1,20 +1,37 @@
 import React, { Component } from "react";
 import firebase from "../Firebase/FirebaseConfig";
-import Modal from 'react-modal';
- 
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
-};
 
 
 class Form extends Component {
+
+  state={
+    username:"Namn",
+    time:"00:00",
+    tel:"Tel",
+    message:"Meddelande",
+  }
+
+  // Controlled Components FORM 
+  onChangeUsername(e) {
+    this.setState({username: e.target.value});
+    
+  }
+
+  onChangeTime(e) {
+    this.setState({time: e.target.value});
+    
+  }
+
+  onChangeTel (e) {
+    this.setState({tel: e.target.value});
+    
+  }
+
+  onChangeMsg (e) {
+    this.setState({message: e.target.value});
+    
+  }
+
 
 
   onSubmitForm(e) {
@@ -34,48 +51,50 @@ class Form extends Component {
           message: e.target.elements.message.value,
         });
 
-      alert("Ditt meddelande är skickat");
+      alert("Ditt meddelande är skickats");
+      
     }
   }
 
-  render(props) {
+    
+
+  render() {
+
     return (
       <div>
-
-      
-     <Modal isOpen={props.openModal} style={customStyles} contentLabel="BookingForm">
 
 
         <form onSubmit={this.onSubmitForm} className={"form"}>
           <input
             type={"text"}
             className={"input"}
-            placeholder={"Namn"}
             name="username"
+            value={this.state.username} onChange={this.onChangeUsername.bind(this)}
           ></input>
           <input
             type={"text"}
             className={"input"}
             placeholder={"Tid"}
             name="time"
+            value={this.state.time} onChange={this.onChangeTime.bind(this)}
           ></input>
           <input
             type={"number"}
             className={"input"}
             placeholder={"Tel"}
             name="tel"
+            value={this.state.tel} onChange={this.onChangeTel.bind(this)}
           ></input>
           <textarea
             type={"text"}
             className={"input"}
             placeholder={"Meddelande"}
             name="message"
+            value={this.state.message} onChange={this.onChangeMsg.bind(this)}
           ></textarea>
 
           <button>Boka</button>
         </form>
-
-        </Modal>
       </div>
     );
   }

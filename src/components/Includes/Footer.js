@@ -7,8 +7,19 @@ class Footer extends Component {
 
     state= {
         condition: true,
-        user: ""
+        user: "",
+        email: "namn@email.com",
+        message: "Ditt meddelande",
        }
+
+      onChangeEmail(e) {
+        this.setState({email: e.target.value});
+        
+      }
+      onChangeMsg (e) {
+        this.setState({message: e.target.value});
+        
+      }
     
     onSubmitForm(e){
     e.preventDefault();
@@ -39,8 +50,8 @@ render(){
           <h2>Kontakta oss</h2>
           </div>
             <form onSubmit={this.onSubmitForm.bind(this)} className={"contact_form"}>
-              <input type="email" name="email" placeholder="Email" className={"contact_input"} />
-              <input type="textarea" name="message" placeholder="Message..." rows="3" cols="50" className={"contact_input"}/>
+              <input type="email" name="email" className={"contact_input"} value={this.state.email} onChange={this.onChangeEmail.bind(this)} />
+              <input type="textarea" name="message" rows="3" cols="50" className={"contact_input"} value={this.state.message} onChange={this.onChangeMsg.bind(this)}/>
               <button className={"contact_btn"}>Kontakta oss</button>
             </form>
         </div>
